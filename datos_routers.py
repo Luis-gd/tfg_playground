@@ -45,14 +45,14 @@ loss = history.history['loss']
 val_loss = history.history['val_loss']
 
 epochs = range(1, len(loss) + 1)
-acc = 
+acc = 10
 
 
-plt.plot(epochs, acc, 'bo', label='Training acc')
-plt.plot(epochs, val_loss, 'b', label='Validation acc')
-plt.title('Training and validation accuracy')
-plt.xlabel('Epochs')
-plt.ylabel('Accuracy')
-plt.legend()
+#plt.plot(epochs, acc, 'bo', label='Training acc')
+#plt.plot(epochs, val_loss, 'b', label='Validation acc')
+#plt.title('Training and validation accuracy')
+#plt.xlabel('Epochs')
+#plt.ylabel('Accuracy')
+#plt.legend()
 
-plt.show()
+#plt.show()
