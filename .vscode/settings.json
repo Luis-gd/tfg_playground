@@ -3,5 +3,6 @@
     "python.linting.pycodestyleEnabled": true,
     "python.linting.pylintEnabled": true,
     "code-runner.runInTerminal": true,
-    "code-runner.executorMap.python": "python -i"
+    "code-runner.executorMap.python": "python -i",
+    "editor.rulers": [79]
 }
