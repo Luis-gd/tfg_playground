@@ -3,6 +3,13 @@ from keras import models
 from keras import optimizers
 from keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
+import tensorflow as tf
+
+config = tf.compat.v1.ConfigProto()
+config.gpu_options.allow_growth = True
+config.log_device_placement = True
+sess = tf.compat.v1.Session(config=config)
+
 
 model = models.Sequential()
 model.add(layers.Conv2D(32, (3, 3), activation='relu',

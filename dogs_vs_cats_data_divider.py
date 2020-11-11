@@ -1,5 +1,7 @@
 import os
 import shutil
+from keras.preprocessing import image
+import keras
 
 original_dataset_dir = 'dogs-vs-cats/train'
 
@@ -71,3 +73,20 @@ for fname in fnames:
     src = os.path.join(original_dataset_dir, fname)
     dst = os.path.join(test_dogs_dir, fname)
     shutil.copyfile(src, dst)
+
+fnames = [os.path.join(train_cats_dir, fname) for
+          fname in os.listdir(train_cats_dir)]   
+
+img_path = fnames[3]
+
+img = image.load_img(img_path, target_size=(150, 150))
+
+datagen = ImageDataGenerator(
+    
+    rotation_range=40,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True,
+    fill_mode='nearest' )
